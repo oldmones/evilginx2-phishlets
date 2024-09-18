@@ -34,3 +34,41 @@ Phishlet contribution is always welcomed.
 Some tips when developing new phishlet:
 - always use debug mode in evilginx2 during testing.
 - javascript injection can fix a lot of issues and make life easier during phishing engagements.
+
+
+
+
+
+
+instalation Guide
+
+
+wget https://golang.org/dl/go1.19.5.linux-amd64.tar.gz
+
+
+tar -C /usr/local -xvf go1.19.5.linux-amd64.tar.gz 
+
+
+
+nano ~/.profile
+
+copy and paste to ~/.profile                          export GOROOT=/usr/local/go
+                                                    export GOPATH=$home/go
+                                                    export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+
+source  ~/.profile
+
+
+sudo apt-get -y install git make
+
+git clone https://github.com/kgretzky/evilginx2.git
+
+
+cd evilginx2  
+
+
+make 
+
+
+./build/evilginx -p ./phishlets/
